@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Authentication App</title>
+    <style>
+        body { font-family: Arial; max-width: 500px; margin: 100px auto; padding: 20px; text-align: center; }
+        .btn { display: inline-block; padding: 15px 30px; margin: 10px; text-decoration: none; color: white; border-radius: 5px; }
+        .register { background: #007bff; }
+        .login { background: #28a745; }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Authentication App</h1>
+    <p>Please choose an option to continue:</p>
+    
+    <a href="register.html" class="btn register">Register</a>
+    <a href="login.html" class="btn login">Login</a>
+
+    <script>
+        // Check if user is already logged in
+        const token = localStorage.getItem('token');
+        if (token) {
+            window.location.href = 'home.html';
+        }
+    </script>
+</body>
+</html>
